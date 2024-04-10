@@ -1,5 +1,6 @@
 package com.test.gamelistapp.data.remote
 
+import com.test.gamelistapp.data.model.games.ListAllGames
 import com.test.gamelistapp.utillity.Constant.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
@@ -10,11 +11,11 @@ interface GameApiService {
 
     @GET("games")
     suspend fun getAllGames(
-        @Query("api_key")
+        @Query("key")
         apiKey: String = API_KEY,
-        @Query("language")
-        language: String = "en-US",
-        @Query("append_to_response")
-        appendToResponse: String = "credits,recommendations,videos"
-    ): Response<String>
+        @Query("page")
+        page: Int = 1,
+        @Query("page_size")
+        pageSize: Int = 10
+    ): Response<ListAllGames>
 }

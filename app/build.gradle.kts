@@ -54,7 +54,7 @@ android {
 dependencies {
 
     val room_version = "2.6.1"
-    val hilt_version = "2.44"
+    val hilt_version = "2.48"
     val retrofit_version = "2.11.0"
     val glide_version = "4.14.2"
 
@@ -77,6 +77,7 @@ dependencies {
 
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
 
     //Gson
     implementation("com.google.code.gson:gson:2.10.1")
@@ -92,6 +93,12 @@ dependencies {
     // define any required OkHttp artifacts without version
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
+
+    //Pagination
+    implementation("androidx.paging:paging-runtime:3.1.0")
+
+    //ViewModel
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
 
 
 

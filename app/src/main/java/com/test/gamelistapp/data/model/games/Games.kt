@@ -22,7 +22,7 @@ data class Games(
     @SerializedName("playtime")
     val playtime: Int,
     @SerializedName("rating")
-    val rating: Int,
+    val rating: Double,
     @SerializedName("rating_top")
     val ratingTop: Int,
     @SerializedName("ratings")

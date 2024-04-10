@@ -17,6 +17,9 @@ interface GameDao {
     @Query("SELECT * FROM favorite")
     fun getAllGames(): LiveData<List<GameEntities>>
 
+    @Query("SELECT * FROM favorite WHERE id = :id")
+    fun getGames(id: Int): LiveData<List<GameEntities>>
+
     @Delete
     suspend fun deleteGames(game: GameEntities)
 }

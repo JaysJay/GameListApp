@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_ratings"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProducer"
+        app:layout_constraintStart_toEndOf="@+id/tvProducer"
+        app:layout_constraintTop_toTopOf="@+id/tvProducer" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ini judul"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgGame"
+        app:layout_constraintStart_toStartOf="@+id/imgGame"
+        app:layout_constraintTop_toBottomOf="@+id/imgGame" />
+
+    <TextView
+        android:id="@+id/tvProducer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ini producer"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/imgGame"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/imgGame"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_outline"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
